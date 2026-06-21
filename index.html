@@ -33,6 +33,8 @@
   ul.goal li{font-size:15px; margin:6px 0; padding-left:4px;}
   ol.refs{margin:6px 0 12px; padding-left:22px;}
   ol.refs li{font-size:14px; margin:7px 0; line-height:1.6;}
+  ul.refs-apa{margin:6px 0 14px; padding-left:0; list-style:none;}
+  ul.refs-apa li{font-size:14px; margin:7px 0; line-height:1.6; padding-left:22px; text-indent:-22px;}
   figure{margin:18px 0; text-align:center;}
   figure img{max-width:100%; border:1px solid var(--line); border-radius:4px;}
   figcaption{font-family:"Noto Sans KR",sans-serif; font-size:12.5px; color:#444; margin-top:8px; font-weight:700;}
@@ -82,6 +84,7 @@
   <p>경영통계를 가르치다 보면, 학기마다 비슷한 패턴이 반복된다. 수업 시간에는 따라오는 것 같은데 집에 가면 혼자 못하겠다는 학생이 있다. 공식을 대입하는 순서는 아는데 왜 그렇게 해야 하는지 모르겠다는 학생도 있다. 사소한 것 같아서 교수자에게 물어보기 민망하다고 그냥 넘어가버리는 학생들도 많이 보았다. 학생들은 이러한 어려움이 쌓이다 보면 어느 순간 학습을 포기하는 경우도 생긴다.</p>
   <p>범용 LLM에 통계 개념과 문제를 물어보며 공부하는 것에 대해 학생들에게 직접 물어본 적이 있다. 도움이 될 것이라 생각했던 것과 달리, 정답을 그럴듯하게 틀리게 알려주는 경우가 꽤 있다는 답변이 돌아왔다. 수업 내용과 맞지 않는 풀이 방식을 알려준다는 이야기도 있었다. 공식은 맞는데 어느 상황에 어떻게 쓰는지 맥락이 빠져있어서 오히려 더 헷갈렸다는 이야기도 나왔다.</p>
   <p>수년간 수업을 진행하면서 이러한 학습 공백을 즉각적으로 메우기 어렵다는 한계를 거듭 경험하였다. 교수자와 학생들이 함께 학문과 실제를 탐구하지 못한다는 한계도 마찬가지였다. 학생들이 필요한 순간에 수업 내용을 기반으로 한 정확한 정보를 얻고, 교수자와 학생이 함께 문제를 탐구해 나가는 수업을 만들고자 하였다. 그러려면 수업 밖에서도 도움을 받을 수 있고, 같은 질문을 반복해서 확인할 수 있으며, 눈치 보지 않고 궁금한 것을 물어볼 수 있는 환경이 필요했다. 이를 보완하고자 AI 활용 수업을 설계하였다.</p>
+  <p>이러한 문제의식은 선행 연구와도 맞닿아 있다. 챗봇을 활용한 개인화된 학업 지원이 학습자의 접근성과 만족을 높인다는 보고가 있으며(Dawood, 2024), 교육 분야의 검색 증강 생성(RAG) 기반 챗봇이 학습 지원·지식 접근 등 다양한 목적으로 활용되고 있다(Swacha &amp; Gracel, 2025). 또한 형성평가는 학습 과정에서의 피드백을 통해 학습을 촉진하고(Black &amp; Wiliam, 1998), 학습자의 자기조절학습을 강화하는 것으로 알려져 있다(Nicol &amp; Macfarlane-Dick, 2006). 본 수업은 이러한 형성평가의 원리를 수업 특화 AI 교육봇·퀴즈·재시험과 결합하여 구현하고자 하였다.</p>
   <h3 class="sub">2) 교육 목표</h3>
   <ul class="goal">
     <li>① 시공간에 제한받지 않는 즉각적인 학습 지원 환경 구축</li>
@@ -101,7 +104,7 @@
     <figure><img src="fig2.png" alt="온라인 강의안"><figcaption>그림 2. 온라인 강의안</figcaption></figure>
   </div>
   <p><b>② 24/7 AI Q&amp;A 교육봇 및 퀴즈 기반 학습 지원 운영</b><br>
-  학기 시작부터 강의 내용과 퀴즈 문항을 담은 교육봇을 운영하였다. 학생들이 공부하다가 어려움이 생길 때 바로 질문할 수 있는 환경을 만드는 게 핵심이었다. 단순히 정답만 알려주는 방식보다는, 힌트를 먼저 주고 스스로 생각해 보도록 유도하는 구조로 설계하였다.</p>
+  학기 시작부터 강의 내용과 퀴즈 문항을 담은 교육봇을 운영하였다. 학생들이 공부하다가 어려움이 생길 때 바로 질문할 수 있는 환경을 만드는 게 핵심이었다. 단순히 정답만 알려주는 방식보다는, 힌트를 먼저 주고 스스로 생각해 보도록 유도하는 구조로 설계하였다. 퀴즈를 통한 반복적 인출 연습은 장기 기억의 공고화에 기여하는 것으로 알려져 있으며(Roediger &amp; Karpicke, 2006), 본 교육봇은 이러한 인출 연습과 즉각적 피드백을 결합하고자 하였다.</p>
   <div class="figrow">
     <figure><img src="fig3.png" alt="AI 교육봇 퀴즈 화면"><figcaption>그림 3. AI 교육봇 퀴즈 화면</figcaption></figure>
     <figure><img src="fig4.png" alt="퀴즈 완료 후 AI 피드백 화면"><figcaption>그림 4. 퀴즈 완료 후 AI 피드백 화면</figcaption></figure>
@@ -111,12 +114,12 @@
   <figure><img src="fig5.png" alt="중간평가 1차 시험 온라인 자료실"><figcaption>그림 5. 중간평가 1차 시험 온라인 자료실</figcaption></figure>
 
   <h3 class="sub">2) 교수자의 역할 및 운영 전략</h3>
-  <p>수업을 설계하면서 교수자가 어떤 역할을 해야 하는지를 꽤 오래 생각했다. 생성형 AI가 교육 현장에 본격적으로 들어온 지금, 정보를 전달하는 것만으로는 교수자의 역할을 설명하기 어려워졌다. 정보 전달자 역할은 교육봇이 상당 부분 대신할 수 있다. 그렇다면 교수자가 해야 할 역할은 다르게 설정되어야 했다.</p>
+  <p>수업을 설계하면서 교수자가 어떤 역할을 해야 하는지를 꽤 오래 생각했다. 생성형 AI가 교육 현장에 본격적으로 들어온 지금, 정보를 전달하는 것만으로는 교수자의 역할을 설명하기 어려워졌다. 정보 전달자 역할은 교육봇이 상당 부분 대신할 수 있다. 탐구공동체(Community of Inquiry) 모형에서 교수자의 역할은 학습 설계·촉진·직접 교수의 세 기능으로 정의되는데(Garrison et al., 2000), 정보 전달이 자동화될수록 학습을 설계하고 촉진하는 역할의 비중이 더 커진다. 그렇다면 교수자가 해야 할 역할은 다르게 설정되어야 했다.</p>
   <p>학생들이 AI의 답변을 비판적으로 바라볼 수 있도록 유도했다. 또한 교육봇이 다루지 못하는 관점의 다양성이나 실제 의사결정 맥락을 연결해주는 데 집중했다. 교육봇 응답 품질도 주기적으로 확인했다. 가끔은 학생들이 챗봇 답변 중 이상한 부분을 직접 가져오기도 했는데, 그걸 수업 시간에 같이 들여다보는 과정이 생각보다 좋은 학습 경험이 되기도 했다.</p>
 
   <h3 class="sub">3) AI 활용 과정에서 중점적으로 고려한 사항</h3>
   <p>AI 활용 과정에서 다음 세 가지를 중점적으로 고려하였다.</p>
-  <p><b>첫째, 정확성이다.</b> 범용 LLM이 통계 문제에서 그럴듯하게 틀리는 경우를 학생들에게서 직접 들었다. 그래서 교육봇이 강의 범위 안에서만 답변하도록 프롬프트를 엄격하게 설계했다. 범용 LLM이 유발할 수 있는 할루시네이션(거짓을 마치 사실처럼 답하는 현상)과 개념 왜곡을 막는 것이 핵심이었다. 답변 범위를 벗어난 질문에 대해서는 교수자에게 직접 질문하도록 안내하는 방식으로 오답 생성 가능성을 차단했다. 신뢰도에 결정적인 부분이라고 보았다.</p>
+  <p><b>첫째, 정확성이다.</b> 범용 LLM이 통계 문제에서 그럴듯하게 틀리는 경우를 학생들에게서 직접 들었다. 그래서 교육봇이 강의 범위 안에서만 답변하도록 프롬프트를 엄격하게 설계했다. 범용 LLM이 유발할 수 있는 할루시네이션(거짓을 마치 사실처럼 답하는 현상)과 개념 왜곡을 막는 것이 핵심이었다. 답변 범위를 벗어난 질문에 대해서는 교수자에게 직접 질문하도록 안내하는 방식으로 오답 생성 가능성을 차단했다. 검색 증강 생성(RAG)은 외부 지식베이스를 검색하여 응답의 사실성을 높이는 방법으로(Lewis et al., 2020), 본 교육봇은 강의 자료에 기반한 검색으로 환각을 억제하였다. 자동화에 대한 신뢰는 사용자가 그 도구에 어느 정도 의존할지를 결정하는 핵심 요인이므로(Lee &amp; See, 2004), 정확성 통제는 신뢰 확보의 출발점이라고 보았다.</p>
   <div class="chat"><p class="ct">교육봇의 할루시네이션 방지</p>
     <p class="s"><span class="who">학생</span> : 범용 LLM AI에 통계 문제를 물어보면 가끔 틀린 답을 자신 있게 내놓던데, 왜 그런 건가요?</p>
     <p class="b"><span class="who">교육봇</span> : 그런 현상을 ‘할루시네이션’이라고 합니다. 학습하지 못한 내용을 사실인 것처럼 그럴듯하게 지어내는 것입니다.</p>
@@ -146,7 +149,8 @@
     <figure><img src="fig7.png" alt="중간평가 2차 시험 점수 분포"><figcaption>그림 7. 중간평가 2차 시험(재시험) 점수 분포</figcaption></figure>
     <figure><img src="fig8.png" alt="기말고사 점수 분포"><figcaption>그림 8. 기말고사 점수 분포</figcaption></figure>
   </div>
-  <p>학기 중 꾸준히 진행한 학습자 인식 설문 결과, 종합 인식 점수는 평균 4.26/5점으로 긍정적인 평가를 받았다. 6개 구인 중에서는 퀴즈-챗봇 연동이 4.48점으로 최고점이었다. 개별 문항 중에서는 부담 없는 분위기가 전체 14개 문항 중 가장 높다. 개별 문항 중 답변 정확성, 재사용 의사, 전반 도움에서도 높은 만족도가 나타났다. 특히 사전 통계 수준이 낮은 학습자일수록 종합 인식이 높게 나타나, 통계적 배경이 부족한 학생에게 교육봇의 효과가 더 크게 체감된 것으로 파악되었다. 아울러 개념 이해와 자신감 항목에서도 긍정적인 응답이 확인되어, 교육봇이 인지된 학습효과 측면에서도 유의미한 역할을 한 것으로 볼 수 있다.</p>
+  <p>학기 중 꾸준히 진행한 학습자 인식 설문 결과, 종합 인식 점수는 평균 4.26/5점으로 긍정적인 평가를 받았다. 6개 구인 중에서는 퀴즈-챗봇 연동이 4.48점으로 최고점이었다. 개별 문항 중에서는 부담 없는 분위기가 전체 14개 문항 중 가장 높다. 개별 문항 중 답변 정확성, 재사용 의사, 전반 도움에서도 높은 만족도가 나타났다. 특히 사전 통계 수준이 낮은 학습자일수록 종합 인식이 높게 나타나, 통계적 배경이 부족한 학생에게 교육봇의 효과가 더 크게 체감된 것으로 파악되었다. 이는 사전 지식이 부족한 학습자일수록 새로운 학습 도구의 효과를 더 크게 느낀다는 전문성 역전 효과와도 일치한다(Kalyuga et al., 2003). 아울러 개념 이해와 자신감 항목에서도 긍정적인 응답이 확인되어, 교육봇이 인지된 학습효과 측면에서도 유의미한 역할을 한 것으로 볼 수 있다.</p>
+  <p>설문 응답은 서열형 자료의 특성을 고려하여 모수적 t-검정과 비모수적 윌콕슨 부호순위 검정을 함께 적용해 분석하였다. 14개 문항 중 13개가 기준점(3.5점) 대비 통계적으로 유의하였으며, 전반 만족도는 이해도 향상·호기심 자극·재사용 의사·일관된 설명과 가장 밀접하게 연관되는 것으로 나타났다(스피어만 ρ=.58~.66). 한편 멀티모달 인터랙션과 교수자 실재감에 대한 긍정적 인식은, 아바타와 같은 체화적 대화 에이전트가 학습 참여와 이해도를 높일 수 있다는 선행 연구(Mayer &amp; DaPra, 2012; Zhang &amp; Pan, 2025)와 맥을 같이한다.</p>
   <p class="tcap">표 2. 학습자 인식 설문 주요 결과 (5점 리커트, n=22)</p>
   <table class="num"><thead><tr><th class="l">구인</th><th>평균</th><th class="l">문항</th><th>문항 평균</th></tr></thead>
   <tbody>
@@ -177,7 +181,7 @@
   <h3 class="sub">2) AI 활용에 따른 수업 운영의 효율성 및 효과성</h3>
   <p>2026-1학기 전체 기준으로 교육봇 누적 이용량은 175세션, 712개 메시지, 사용자 38명이었다. 수강생 수(26명)를 넘는 38명이 이용했다는 것은 교육봇이 수강생 외에도 퍼졌다는 의미다. 실제로 학생들에게 물어보니 타 전공과 교양에서 열리는 통계 과목 수강 중인 친구에게 공유했다는 대답을 들을 수 있었다. 이는 교육봇이 더 넓게 쓰일 수 있다는 가능성을 보여준다.</p>
   <p>한 번 접속하고 마는 수준이 아니라 계속 대화하면서 학습이 이루어졌다는 게 수치로도 드러난다. 1인당 평균 약 18.7개의 메시지를 주고받았다. 이용이 집중된 시간대가 저녁 19~21시였다는 것도 인상적이다. 학교 밖에서 혼자 공부하는 시간에 교육봇이 실제로 쓰이고 있었다. 실질적인 지원이 이루어졌다는 걸 확인하였다.</p>
-  <p>학습자 인식 설문(n=22)의 인지된 학습효과 구인도 전반적으로 높게 나왔다. 특히 문항 중 재사용 의사가 평균 4.5점이었다. 불편하거나 효과가 없었다면 나오기 어려운 수치다. 반면에 학습몰입·호기심 구인은 평균 3.98점으로, 전체 구인 중 유일하게 4점을 밑돌았다. 이는 교육봇이 학생들의 학습 지원 도구로서는 효과적이었지만, 학습 자체의 재미나 몰입감을 이끌어내는 측면에서는 추가적인 개선이 필요함을 시사한다.</p>
+  <p>학습자 인식 설문(n=22)의 인지된 학습효과 구인도 전반적으로 높게 나왔다. 특히 문항 중 재사용 의사가 평균 4.5점이었다. 불편하거나 효과가 없었다면 나오기 어려운 수치다. 반면에 학습몰입·호기심 구인은 평균 3.98점으로, 전체 구인 중 유일하게 4점을 밑돌았다. 이는 교육봇이 학생들의 학습 지원 도구로서는 효과적이었지만, 학습 자체의 재미나 몰입감을 이끌어내는 측면에서는 추가적인 개선이 필요함을 시사한다. 몰입은 도전과 능력이 균형을 이룰 때 발생하는데(Csikszentmihalyi, 1990), 응답 지연이나 기기 전환 시의 진도 리셋 같은 기술적 한계, 그리고 RAG 코퍼스의 정보 깊이 부족이 몰입 경험을 저해한 요인으로 분석된다.</p>
   <p class="tcap">표 4. AI 교육봇 누적 사용 현황</p>
   <table><thead><tr><th>항목</th><th class="l">내용</th></tr></thead>
   <tbody>
@@ -208,7 +212,7 @@
   <h3 class="sub">3) 윤리적 고려사항 및 운영상 보완 필요 사항</h3>
   <p>AI 응답의 최종 책임은 교수자에게 있다는 점을 학기 초에 분명히 했다. 이 과정에서 학생들이 교육봇 답변을 무조건 믿기보다는 비판적으로 바라보는 태도를 갖추도록 함께 고민하였다. 이것이 AI 활용 수업에서 교수자가 해야 할 핵심 역할 중 하나라고 본다. 개인정보 보호 측면에서, 학생들이 교육봇에 입력하는 내용이 어떻게 관리되는지에 대한 안내도 정식 절차로 마련할 필요가 있다. 이번 학기에는 플랫폼 보안 정책을 사전에 검토했으나, 학생 동의 절차나 데이터 보관 기준을 명문화한 문서는 없었다. 다음 학기에는 이 부분을 갖춰 두어야겠다고 생각한다.</p>
   <h3 class="sub">4) 향후 수업 개선 및 발전 방향</h3>
-  <p>형성평가 동기 문제를 해결하려면 향상도를 총괄평가에 일부 연결하는 방식을 검토할 필요가 있다. 재시험 점수 향상 폭이나 교육봇 활용 패턴 같은 지표를 평가에 반영하는 방안도 생각해보고 있다. 아울러 절대평가 운영이 가능한 적정 수강 인원을 유지하여 평가의 일관성을 높이는 것도 함께 검토하고 있다. 기술적으로는 교육봇 질문 유형 분석을 정기화해서 수업 설계에 피드백으로 쓰는 루틴을 만들고 싶다. 퀴즈에서 오답이 나왔을 때 관련 학습 경로를 교육봇이 자동으로 제안하는 연동 구조도 구상 중이며, 질문 빈도가 높은 개념에 대한 보충 영상 자료 제작도 검토하고 있다.</p>
+  <p>형성평가 동기 문제를 해결하려면 향상도를 총괄평가에 일부 연결하는 방식을 검토할 필요가 있다. 재시험 점수 향상 폭이나 교육봇 활용 패턴 같은 지표를 평가에 반영하는 방안도 생각해보고 있다. 아울러 절대평가 운영이 가능한 적정 수강 인원을 유지하여 평가의 일관성을 높이는 것도 함께 검토하고 있다. 기술적으로는 교육봇 질문 유형 분석을 정기화해서 수업 설계에 피드백으로 쓰는 루틴을 만들고 싶다. 퀴즈에서 오답이 나왔을 때 관련 학습 경로를 교육봇이 자동으로 제안하는 연동 구조도 구상 중이며, 질문 빈도가 높은 개념에 대한 보충 영상 자료 제작도 검토하고 있다. 아울러 가장 낮게 평가된 학습몰입을 끌어올리기 위해, 점수·배지 등 게임 설계 요소를 학습 과정에 접목하는 게임화 방안도 검토하고 있다. 게임화는 학습 동기와 참여를 촉진하는 것으로 보고된다(Hamari et al., 2014).</p>
 
   <h2>Ⅵ. 교육적 시사점 및 확산 가능성</h2>
   <h3 class="sub">1) 대학 교육에 주는 시사점</h3>
@@ -221,7 +225,7 @@
 
   <h2>Ⅶ. 기타</h2>
   <p>학기가 끝나고 돌아보면, 교육봇이 학생들한테 도구로 자리 잡았다는 것보다 더 의미있게 느껴지는 게 있다. 저녁에 혼자 공부하다가 막힐 때 쓸 수 있는 무언가가 생겼다는 경험을 만들었다는 점이다. 다음 학기에는 형성평가의 동기 구조를 다시 설계하고, 교육봇 응답 커버리지를 더 넓히는 두 가지를 우선으로 보완할 생각이다. AI를 수업에 활용한다는 게 거창한 일이 아니다. 학생이 필요한 순간에 정확한 도움을 받을 수 있는 통로를 하나 더 만들어주는 일이라는 걸 이번 학기를 통해 다시금 확인할 수 있었다.</p>
-  <p>한편 본 수업 운영 경험은 학술 논문으로도 이어지고 있다. AI 아바타 챗봇의 신뢰 형성을 다룬 「신뢰 지향 아바타 챗봇의 설계와 사용자 인식」은 <b>디지털콘텐츠학회 논문지에 게재를 준비</b> 중이며, 본 수업(경영통계)의 AI 교육봇 설계와 학습자 인식을 다룬 「경영통계 교육을 위한 퀴즈 연동 멀티모달 AI 티칭봇의 설계와 학습자 인식」은 <b>사이버커뮤니케이션학회지에 게재를 준비</b> 중이다.</p>
+  <p>한편 본 수업 운영 경험은 학술 논문으로도 이어지고 있다. AI 아바타 챗봇의 신뢰 형성을 다룬 「신뢰 지향 아바타 챗봇의 설계와 사용자 인식」(성봉주 등, 2026)은 <b>디지털콘텐츠학회 논문지에 게재를 준비</b> 중이며, 본 수업(경영통계)의 AI 교육봇 설계와 학습자 인식을 다룬 「경영통계 교육을 위한 퀴즈 연동 멀티모달 AI 티칭봇의 설계와 학습자 인식」(성봉주 등, 2026)은 <b>사이버커뮤니케이션학회지에 게재를 준비</b> 중이다.</p>
 
   <h2>Ⅷ. 부록</h2>
   <ul class="goal">
@@ -231,26 +235,28 @@
   </ul>
 
   <h2>Ⅸ. 참고문헌</h2>
+  <p style="font-size:13px;color:#555;margin:2px 0 10px;">※ 본문에서 인용한 문헌을 APA 형식으로 정리하였다.</p>
   <h3 class="sub">본 사례 관련 저자 논문</h3>
-  <ol class="refs">
-    <li>성봉주·이규성·김정환·박대근 (2025). 「신뢰 지향 아바타 챗봇의 설계와 사용자 인식: 전공 선택과 진로 상담 사례」, <i>디지털콘텐츠학회논문지</i>, 게재 준비 중.</li>
-    <li>성봉주·이규성·김진솔·이효주·김정환·박대근 (2026). 「경영통계 교육을 위한 퀴즈 연동 멀티모달 AI 티칭봇의 설계와 학습자 인식」, <i>사이버커뮤니케이션학회지</i>, 게재 준비 중.</li>
-  </ol>
-  <h3 class="sub">주요 선행연구</h3>
-  <ol class="refs" start="3">
-    <li>M. Dawood, “Assessing the Effectiveness of Chatbots in Providing Personalized Academic Advising,” <i>Studies in Technology Enhanced Learning</i>, Vol. 4, No. 1, 2024.</li>
-    <li>P. Black and D. Wiliam, “Assessment and Classroom Learning,” <i>Assessment in Education</i>, Vol. 5, No. 1, pp. 7-74, 1998.</li>
-    <li>D. Nicol and D. Macfarlane-Dick, “Formative Assessment and Self-Regulated Learning,” <i>Studies in Higher Education</i>, Vol. 31, No. 2, pp. 199-218, 2006.</li>
-    <li>H. L. Roediger and J. D. Karpicke, “The Power of Testing Memory,” <i>Perspectives on Psychological Science</i>, Vol. 1, No. 3, pp. 181-210, 2006.</li>
-    <li>P. Lewis et al., “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,” <i>NeurIPS</i>, Vol. 33, pp. 9459-9474, 2020.</li>
-    <li>J. Swacha and M. Gracel, “RAG Chatbots for Education: A Survey of Applications,” <i>Applied Sciences</i>, Vol. 15, No. 8, 2025.</li>
-    <li>Y. Zhang and W. Pan, “A Scoping Review of Embodied Conversational Agents in Education 2014-2024,” <i>Interactive Learning Environments</i>, Vol. 33, No. 7, pp. 4566-4587, 2025.</li>
-    <li>R. E. Mayer and C. S. DaPra, “An Embodiment Effect in Computer-Based Learning,” <i>J. of Experimental Psychology: Applied</i>, Vol. 18, No. 3, pp. 239-252, 2012.</li>
-    <li>D. R. Garrison, T. Anderson, and W. Archer, “Critical Inquiry in a Text-Based Environment,” <i>The Internet and Higher Education</i>, Vol. 2, No. 2-3, pp. 87-105, 2000.</li>
-    <li>M. Csikszentmihalyi, <i>Flow: The Psychology of Optimal Experience</i>, Harper &amp; Row, 1990.</li>
-    <li>J. Hamari, J. Koivisto, and H. Sarsa, “Does Gamification Work? A Literature Review,” <i>HICSS 2014</i>, pp. 3025-3034.</li>
-    <li>J. D. Lee and K. A. See, “Trust in Automation: Designing for Appropriate Reliance,” <i>Human Factors</i>, Vol. 46, No. 1, pp. 50-80, 2004.</li>
-  </ol>
+  <ul class="refs-apa">
+    <li>성봉주, 이규성, 김정환, 박대근 (2026). 신뢰 지향 아바타 챗봇의 설계와 사용자 인식: 전공 선택과 진로 상담 사례. <i>디지털콘텐츠학회논문지</i>. (게재 준비 중)</li>
+    <li>성봉주, 이규성, 김진솔, 이효주, 김정환, 박대근 (2026). 경영통계 교육을 위한 퀴즈 연동 멀티모달 AI 티칭봇의 설계와 학습자 인식. <i>사이버커뮤니케이션학회지</i>. (게재 준비 중)</li>
+  </ul>
+  <h3 class="sub">선행연구</h3>
+  <ul class="refs-apa">
+    <li>Black, P., &amp; Wiliam, D. (1998). Assessment and classroom learning. <i>Assessment in Education, 5</i>(1), 7–74.</li>
+    <li>Csikszentmihalyi, M. (1990). <i>Flow: The psychology of optimal experience</i>. Harper &amp; Row.</li>
+    <li>Dawood, M. (2024). Assessing the effectiveness of chatbots in providing personalized academic advising. <i>Studies in Technology Enhanced Learning, 4</i>(1).</li>
+    <li>Garrison, D. R., Anderson, T., &amp; Archer, W. (2000). Critical inquiry in a text-based environment: Computer conferencing in higher education. <i>The Internet and Higher Education, 2</i>(2–3), 87–105.</li>
+    <li>Hamari, J., Koivisto, J., &amp; Sarsa, H. (2014). Does gamification work? A literature review of empirical studies on gamification. <i>Proceedings of the 47th Hawaii International Conference on System Sciences</i>, 3025–3034.</li>
+    <li>Kalyuga, S., Ayres, P., Chandler, P., &amp; Sweller, J. (2003). The expertise reversal effect. <i>Educational Psychologist, 38</i>(1), 23–31.</li>
+    <li>Lee, J. D., &amp; See, K. A. (2004). Trust in automation: Designing for appropriate reliance. <i>Human Factors, 46</i>(1), 50–80.</li>
+    <li>Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., … Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. <i>Advances in Neural Information Processing Systems, 33</i>, 9459–9474.</li>
+    <li>Mayer, R. E., &amp; DaPra, C. S. (2012). An embodiment effect in computer-based learning with animated pedagogical agents. <i>Journal of Experimental Psychology: Applied, 18</i>(3), 239–252.</li>
+    <li>Nicol, D. J., &amp; Macfarlane-Dick, D. (2006). Formative assessment and self-regulated learning: A model and seven principles of good feedback practice. <i>Studies in Higher Education, 31</i>(2), 199–218.</li>
+    <li>Roediger, H. L., &amp; Karpicke, J. D. (2006). The power of testing memory: Basic research and implications for educational practice. <i>Perspectives on Psychological Science, 1</i>(3), 181–210.</li>
+    <li>Swacha, J., &amp; Gracel, M. (2025). RAG chatbots for education: A survey of applications. <i>Applied Sciences, 15</i>(8).</li>
+    <li>Zhang, Y., &amp; Pan, W. (2025). A scoping review of embodied conversational agents in education 2014–2024. <i>Interactive Learning Environments, 33</i>(7), 4566–4587.</li>
+  </ul>
 
 </article>
 </body>
