@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 활용 교수 혁신 사례 보고서 — 수업특화 AI 교육봇을 활용한 경영통계 수업</title>
+<meta name="description" content="강의 기반 수업특화 AI 교육봇 + 24/7 퀴즈 Q&amp;A + PASS 재시험을 통합한 경영통계 수업 혁신 사례. 학습자 인식 4.26/5.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI 활용 교수 혁신 사례 — 수업특화 AI 교육봇을 활용한 경영통계 수업">
+<meta property="og:description" content="강의 기반 AI 교육봇 + 24/7 퀴즈 Q&amp;A + PASS 재시험 통합 운영 · 학습자 인식 4.26/5 · 박대근(차의과학대학교)">
+<meta property="og:image" content="https://sdkparkforbi.github.io/cha-ai-teaching-case-report/thumb.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sdkparkforbi.github.io/cha-ai-teaching-case-report/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{ --ink:#1a1a1a; --muted:#555; --line:#c9c9c9; --accent:#0b4f9c; --soft:#f3f6fb; --bar:#3b6fb0; }
+  *{box-sizing:border-box;}
+  body{margin:0; background:#e9eaee; color:var(--ink);
+       font-family:"Noto Serif KR","나눔명조",NanumMyeongjo,Batang,serif; line-height:1.75;}
+  .paper{max-width:860px; margin:24px auto; background:#fff; padding:48px 56px; box-shadow:0 2px 14px rgba(0,0,0,.12);}
+  .masthead{font-family:"Noto Sans KR",sans-serif; font-size:12.5px; color:var(--muted);
+            border-bottom:2px solid var(--accent); padding-bottom:8px; margin-bottom:24px;
+            display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;}
+  h1.title{font-size:25px; line-height:1.4; margin:6px 0 6px; text-align:center; font-weight:800;}
+  .subtitle{font-size:14.5px; color:#333; text-align:center; margin:0 0 16px; font-weight:600;}
+  .author{text-align:center; font-family:"Noto Sans KR",sans-serif; font-size:13.5px; margin:0 0 4px; font-weight:700;}
+  .affil{text-align:center; font-family:"Noto Sans KR",sans-serif; font-size:12px; color:var(--muted); margin:0 0 22px;}
+  h2{font-size:18px; margin:30px 0 10px; padding-top:6px; border-top:1px solid #eee; font-weight:800;}
+  h3.sub{font-size:15px; margin:18px 0 6px; color:#222; font-weight:700;}
+  p{margin:0 0 12px; text-align:justify; font-size:15px;}
+  ul.goal{margin:6px 0 12px; padding-left:0; list-style:none;}
+  ul.goal li{font-size:15px; margin:6px 0; padding-left:4px;}
+  figure{margin:18px 0; text-align:center;}
+  figure img{max-width:100%; border:1px solid var(--line); border-radius:4px;}
+  figcaption{font-family:"Noto Sans KR",sans-serif; font-size:12.5px; color:#444; margin-top:8px; font-weight:700;}
+  .figrow{display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
+  .figrow figure{flex:1 1 320px; margin:10px 0;}
+  .tcap{font-family:"Noto Sans KR",sans-serif; font-size:13px; font-weight:700; margin:20px 0 6px; color:#222;}
+  table{border-collapse:collapse; width:100%; font-family:"Noto Sans KR",sans-serif; font-size:12.5px; margin:0 0 6px;}
+  th,td{border:1px solid var(--line); padding:6px 9px; text-align:center; vertical-align:middle;}
+  thead th{background:var(--accent); color:#fff; font-weight:700;}
+  td.l,th.l{text-align:left;}
+  .num{font-variant-numeric:tabular-nums;}
+  .chat{border:1px solid #dce6f2; background:#f7faff; border-radius:8px; padding:12px 16px; margin:12px 0;
+        font-family:"Noto Sans KR",sans-serif;}
+  .chat .ct{font-size:12.5px; font-weight:800; color:var(--accent); margin:0 0 8px;}
+  .chat p{font-size:13px; margin:4px 0; text-align:left;}
+  .chat .s{color:#444;} .chat .b{color:#143a63;}
+  .chat .who{font-weight:700;}
+  @media (max-width:640px){ .paper{padding:24px 18px; margin:0;} h1.title{font-size:21px;} }
+  @media print{ html,body{background:#fff;} .paper{box-shadow:none;margin:0;max-width:none;padding:0;}
+    h2,h3.sub{break-after:avoid;} figure,table,.chat{break-inside:avoid;} tr{break-inside:avoid;} a{color:inherit;text-decoration:none;} }
+  @page{ size:A4; margin:15mm 14mm 16mm 14mm;
+    @bottom-center{ content: counter(page) " / " counter(pages); font-family:"Noto Sans KR",sans-serif; font-size:9px; color:#777; } }
+  .pagedjs_page{ background:#fff; box-shadow:0 2px 14px rgba(0,0,0,.14); margin:12px auto; }
+  .pagedjs_page .paper{ box-shadow:none; margin:0; max-width:none; padding:0; }
+</style>
+<script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+</head>
+<body>
+<article class="paper">
+  <div class="masthead"><span>[첨부서식 2] AI 활용 교수 혁신 사례 보고서</span><span>2026</span></div>
+
+  <h1 class="title">AI 활용 교수 혁신 사례 보고서</h1>
+  <p class="subtitle">수업특화 AI 교육봇을 활용한 ‘경영통계’ 수업 혁신</p>
+  <p class="author">박대근</p>
+  <p class="affil">차의과학대학교 헬스케어융합학부 경영학 전공</p>
+
+  <h2>Ⅰ. 개요</h2>
+  <h3 class="sub">1) 교과목 및 운영 현황</h3>
+  <p>‘경영통계’ 과목은 2026-1학년도에 미래융합대학 경영학 전공에서 3학년을 대상으로 개설된 전공선택 과목이다. 3학년을 대상으로 하지만, 실제로는 2학년부터 4학년까지 다양하게 섞여 있다. 총 26명이 수강하였다.</p>
+  <h3 class="sub">2) 수업 목표 및 특징</h3>
+  <p>데이터를 읽고 해석하는 능력, 그리고 분석 결과를 바탕으로 의사결정에 필요한 논거를 만들어내는 역량을 기르는 것을 목표로 한다. 가설 검정, 추정, 상관·분산·회귀분석 등 기본적인 방법론을 중심으로 수업을 구성했다. 수식보다는 “왜 이 방법을 쓰는가”에 집중하는 방향으로 진행하였다.</p>
+  <h3 class="sub">3) AI 활용 개요</h3>
+  <p>이번 학기에는 생성형 AI를 수업 설계 전반에 녹여 운영했다. 크게 세 축으로 정리할 수 있다. 첫째는 강의안·녹취 기반의 AI 교육봇을 매주 업데이트하는 것이다. 둘째는 학생들이 언제든 질문할 수 있도록 24시간 Q&amp;A 교육봇을 운영하는 것이다. 셋째는 중간고사 80점 미달 학생에게 재시험 기회를 주어 성장하는 것에 목표를 두는 것이다. 세 요소가 따로 돌아가는 구조가 아니라, 학생이 시험에서 틀린 부분을 챗봇으로 찾아보고 재도전하는 흐름이 자연스럽게 이어지도록 설계했다.</p>
+
+  <h2>Ⅱ. AI 활용 배경 및 목적</h2>
+  <h3 class="sub">1) 배경 및 필요성</h3>
+  <p>경영통계를 가르치다 보면, 학기마다 비슷한 패턴이 반복된다. 수업 시간에는 따라오는 것 같은데 집에 가면 혼자 못하겠다는 학생이 있다. 공식을 대입하는 순서는 아는데 왜 그렇게 해야 하는지 모르겠다는 학생도 있다. 사소한 것 같아서 교수자에게 물어보기 민망하다고 그냥 넘어가버리는 학생들도 많이 보았다. 학생들은 이러한 어려움이 쌓이다 보면 어느 순간 학습을 포기하는 경우도 생긴다.</p>
+  <p>범용 LLM에 통계 개념과 문제를 물어보며 공부하는 것에 대해 학생들에게 직접 물어본 적이 있다. 도움이 될 것이라 생각했던 것과 달리, 정답을 그럴듯하게 틀리게 알려주는 경우가 꽤 있다는 답변이 돌아왔다. 수업 내용과 맞지 않는 풀이 방식을 알려준다는 이야기도 있었다. 공식은 맞는데 어느 상황에 어떻게 쓰는지 맥락이 빠져있어서 오히려 더 헷갈렸다는 이야기도 나왔다.</p>
+  <p>수년간 수업을 진행하면서 이러한 학습 공백을 즉각적으로 메우기 어렵다는 한계를 거듭 경험하였다. 교수자와 학생들이 함께 학문과 실제를 탐구하지 못한다는 한계도 마찬가지였다. 학생들이 필요한 순간에 수업 내용을 기반으로 한 정확한 정보를 얻고, 교수자와 학생이 함께 문제를 탐구해 나가는 수업을 만들고자 하였다. 그러려면 수업 밖에서도 도움을 받을 수 있고, 같은 질문을 반복해서 확인할 수 있으며, 눈치 보지 않고 궁금한 것을 물어볼 수 있는 환경이 필요했다. 이를 보완하고자 AI 활용 수업을 설계하였다.</p>
+  <h3 class="sub">2) 교육 목표</h3>
+  <ul class="goal">
+    <li>① 시공간에 제한받지 않는 즉각적인 학습 지원 환경 구축</li>
+    <li>② 반복 재시험과 AI 교육봇 활용 복습의 연계를 통한 자기주도 학습 및 메타인지 향상 촉진</li>
+    <li>③ 상대적 점수가 아닌, 학습 성장 과정과 향상도를 중시하는 평가 문화 조성</li>
+  </ul>
+  <h3 class="sub">3) 기대 효과</h3>
+  <p>학생들이 수업 시간 외에도 궁금한 내용을 틀린 정보를 배우는 위험 없이 정확도 높게 바로 학습할 수 있을 것으로 보았다. 그렇게 효율적으로 공부하면서, 문제를 해결하지 못한 채 학습을 중단하는 상황도 줄일 수 있을 것으로 보았다. 또한 반복 평가와 AI 교육봇을 통한 복습을 함께 활용하면서, 자신의 부족한 부분을 스스로 확인하고 보완하는 경험을 할 수 있을 것으로 기대하였다.</p>
+  <p>교수자 입장에서는 매 학기 반복되는 기초 질문에 쓰는 시간을 줄일 수 있을 것이라 기대했다. 그렇게 아낀 시간을 수업의 질을 높이거나 더 깊은 토론을 이끄는 데 쓸 수 있을 것이라 기대했다. 학생들이 보다 높은 이해 수준으로 다음 수업에 참여하면, 이론이 아닌 실제 적용을 함께 탐구하는 시간도 생긴다. 강의 녹취를 바탕으로 자료를 만드는 과정에서 내가 수업에서 실제로 어떻게 설명하는지가 텍스트로 정리된다는 부수 효과도 기대되는 부분이었다. 오랜 시간 체득해 온 암묵지가 형식지로 남아 학생들과 공유할 수 있는 형태가 될 것이라 보았다.</p>
+
+  <h2>Ⅲ. AI 활용 수업 운영 과정</h2>
+  <h3 class="sub">1) 수업 설계 및 운영 방법</h3>
+  <p><b>① 강의안·녹취 기반 AI 교육봇 및 학습자료 주기적 업데이트</b><br>
+  수업이 끝나면 그날 강의 녹취와 강의안을 텍스트로 정리해서 교육봇의 지식 베이스에 넣는 작업을 매주 반복했다. 목적은 단순하다. 학생이 그날 배운 내용을 당일 저녁에 교육봇으로 확인할 수 있도록 동기화하는 것이다. 통계에 특화된 범위 안에서만 답변하도록 프롬프트를 엄격히 잡았다. 그래서 범용 LLM과 달리 수업 밖의 정보가 섞이지 않는다. 지식 베이스의 핵심은 매년 강의를 하며 업데이트 해 온 온라인 강의 노트와 강의 녹취를 바탕으로 만든 자습교재이다.</p>
+  <div class="figrow">
+    <figure><img src="fig1.png" alt="자습교재 본문 일부"><figcaption>그림 1. 자습교재 본문 일부</figcaption></figure>
+    <figure><img src="fig2.png" alt="온라인 강의안"><figcaption>그림 2. 온라인 강의안</figcaption></figure>
+  </div>
+  <p><b>② 24/7 AI Q&amp;A 교육봇 및 퀴즈 기반 학습 지원 운영</b><br>
+  학기 시작부터 강의 내용과 퀴즈 문항을 담은 교육봇을 운영하였다. 학생들이 공부하다가 어려움이 생길 때 바로 질문할 수 있는 환경을 만드는 게 핵심이었다. 단순히 정답만 알려주는 방식보다는, 힌트를 먼저 주고 스스로 생각해 보도록 유도하는 구조로 설계하였다.</p>
+  <div class="figrow">
+    <figure><img src="fig3.png" alt="AI 교육봇 퀴즈 화면"><figcaption>그림 3. AI 교육봇 퀴즈 화면</figcaption></figure>
+    <figure><img src="fig4.png" alt="퀴즈 완료 후 AI 피드백 화면"><figcaption>그림 4. 퀴즈 완료 후 AI 피드백 화면</figcaption></figure>
+  </div>
+  <p><b>③ 중간평가 PASS 기준(80점) 미달 시 재시험 제도</b><br>
+  한 번의 시험 결과만으로 학습 성취 결과를 평가하기보다, 학생들이 개념을 충분히 이해하고 있는지를 확인하는 과정으로 운영하고자 하였다. 따라서 평가 자체보다 학습 목표 도달에 의미를 두고 80점(100점 만점)을 PASS 기준으로 설정하였다. 기준 점수에 도달하지 못한 학생에게는 재응시 기회를 제공하였다. 이 과정에서 1차 시험의 문제와 해설을 온라인 자료실 형태로 공유하였다. 그리고 AI 교육봇을 활용해 부족한 개념을 다시 확인하도록 안내하였다. 이러한 재시험 제도가 실제 학습 성취로 이어졌는지에 대한 결과는 Ⅳ장 운영 성과 및 효과에서 제시한다.</p>
+  <figure><img src="fig5.png" alt="중간평가 1차 시험 온라인 자료실"><figcaption>그림 5. 중간평가 1차 시험 온라인 자료실</figcaption></figure>
+
+  <h3 class="sub">2) 교수자의 역할 및 운영 전략</h3>
+  <p>수업을 설계하면서 교수자가 어떤 역할을 해야 하는지를 꽤 오래 생각했다. 생성형 AI가 교육 현장에 본격적으로 들어온 지금, 정보를 전달하는 것만으로는 교수자의 역할을 설명하기 어려워졌다. 정보 전달자 역할은 교육봇이 상당 부분 대신할 수 있다. 그렇다면 교수자가 해야 할 역할은 다르게 설정되어야 했다.</p>
+  <p>학생들이 AI의 답변을 비판적으로 바라볼 수 있도록 유도했다. 또한 교육봇이 다루지 못하는 관점의 다양성이나 실제 의사결정 맥락을 연결해주는 데 집중했다. 교육봇 응답 품질도 주기적으로 확인했다. 가끔은 학생들이 챗봇 답변 중 이상한 부분을 직접 가져오기도 했는데, 그걸 수업 시간에 같이 들여다보는 과정이 생각보다 좋은 학습 경험이 되기도 했다.</p>
+
+  <h3 class="sub">3) AI 활용 과정에서 중점적으로 고려한 사항</h3>
+  <p>AI 활용 과정에서 다음 세 가지를 중점적으로 고려하였다.</p>
+  <p><b>첫째, 정확성이다.</b> 범용 LLM이 통계 문제에서 그럴듯하게 틀리는 경우를 학생들에게서 직접 들었다. 그래서 교육봇이 강의 범위 안에서만 답변하도록 프롬프트를 엄격하게 설계했다. 범용 LLM이 유발할 수 있는 할루시네이션(거짓을 마치 사실처럼 답하는 현상)과 개념 왜곡을 막는 것이 핵심이었다. 답변 범위를 벗어난 질문에 대해서는 교수자에게 직접 질문하도록 안내하는 방식으로 오답 생성 가능성을 차단했다. 신뢰도에 결정적인 부분이라고 보았다.</p>
+  <div class="chat"><p class="ct">교육봇의 할루시네이션 방지</p>
+    <p class="s"><span class="who">학생</span> : 범용 LLM AI에 통계 문제를 물어보면 가끔 틀린 답을 자신 있게 내놓던데, 왜 그런 건가요?</p>
+    <p class="b"><span class="who">교육봇</span> : 그런 현상을 ‘할루시네이션’이라고 합니다. 학습하지 못한 내용을 사실인 것처럼 그럴듯하게 지어내는 것입니다.</p>
+    <p class="s"><span class="who">학생</span> : 그러면 정답이 분명한 통계 과목에서는 특히 위험하겠네요.</p>
+    <p class="b"><span class="who">교육봇</span> : 그렇습니다. 그래서 저는 답변 범위를 강의 내용으로 제한해, 확인되지 않은 정보는 제시하지 않도록 설계되어 있습니다.</p></div>
+  <p><b>둘째, 교수자 시간의 재배치다.</b> 반복적인 기초 질문에 대한 응답 체계는 교육봇이 전담하도록 설계했다. 이를 통해 교수자가 수업 중 심화 설명과 개별 지도에 집중할 수 있는 구조를 만들었다.</p>
+  <p><b>셋째, 과의존 방지를 위한 과정 중심 비계 설정이다.</b> 퀴즈를 풀 때 정답을 바로 알려주지 않고 힌트를 먼저 주는 구조를 택한 이유가 여기 있다. 정답을 바로 받아 복사하는 것보다 한 번 더 생각하게 만들고자 했다. 교육의 본래 역할을 교육봇을 통해서도 실현해야 한다고 생각했다. 학습에 도움을 주는 비계, 즉 교육봇이 최종적으로 없어지고 답을 도출하는 능력을 길러주고자 하였다.</p>
+  <div class="chat"><p class="ct">교육봇의 비계(스캐폴딩) 방식</p>
+    <p class="s"><span class="who">학생</span> : 문제를 물어봤더니 정답 대신 힌트만 주시네요. 이유가 있나요?</p>
+    <p class="b"><span class="who">교육봇</span> : 학습에서는 이런 방식을 ‘비계’, 곧 ‘스캐폴딩’이라고 합니다. 스스로 풀어낼 수 있도록 잠시 받쳐 주는 발판이라는 뜻입니다.</p>
+    <p class="s"><span class="who">학생</span> : 그러면 계속 힌트에만 의존해서는 안 되겠군요.</p>
+    <p class="b"><span class="who">교육봇</span> : 맞습니다. 스스로 해결하는 단계에 이르면 도움을 점차 줄여, 끝내 발판이 필요 없도록 하는 것이 목표입니다.</p></div>
+
+  <h2>Ⅳ. 운영 성과 및 효과</h2>
+  <h3 class="sub">1) 학습 참여 및 학업성취 변화</h3>
+  <p>기존 중간고사 방식에서는 시험 종료 후 성적이 확정되는 구조로 인해 학생들이 틀린 문제를 확인하거나 오답 원인을 분석하려는 동기를 갖기 어려웠다. 이에 재시험 기회를 제공하여 학생들이 2차 시험에서 PASS를 받기 위해 스스로 1차 시험의 오답을 확인하도록 하였다. 그 원인을 분석한 뒤 개념을 재학습하는 과정을 자연스럽게 거치도록 유도하였다. 이는 단순한 성적 평가를 넘어 학생 스스로가 자신의 학습을 돌아보고 개선하는 자기주도적 학습 태도를 형성하는 데 기여하였다.</p>
+  <p>재시험 제도의 효과는 평가 결과를 통해 확인되었다. 1차 시험에서는 점수가 넓게 분포하여 적지 않은 학생이 PASS 기준에 도달하지 못하였다. 오답 확인과 교육봇 복습을 거친 2차 시험에서는 1명을 제외한 전원이 80% 이상에 도달하였다. 기말고사 평균은 80.93점(25명)으로 나타나, 한 학기의 학습 성과가 점수로도 확인되었다.</p>
+  <p class="tcap">표 1. 중간·기말 평가 결과 요약</p>
+  <table><thead><tr><th>평가 구분</th><th>응시 인원</th><th class="l">핵심 결과</th></tr></thead>
+  <tbody>
+    <tr><th>중간 1차</th><td>25명</td><td class="l">점수가 넓게 분포(만점 40점), 다수가 PASS 기준(80%) 미달</td></tr>
+    <tr><th>중간 2차(재시험)</th><td>1차 미달자</td><td class="l">1명을 제외한 전원이 80% 이상 도달</td></tr>
+    <tr><th>기말고사</th><td>25명</td><td class="l">평균 80.93점(만점 100점), 90점대에 최다 분포</td></tr>
+  </tbody></table>
+  <figure><img src="fig6.png" alt="중간평가 1차 시험 점수 분포"><figcaption>그림 6. 중간평가 1차 시험 점수 분포</figcaption></figure>
+  <div class="figrow">
+    <figure><img src="fig7.png" alt="중간평가 2차 시험 점수 분포"><figcaption>그림 7. 중간평가 2차 시험(재시험) 점수 분포</figcaption></figure>
+    <figure><img src="fig8.png" alt="기말고사 점수 분포"><figcaption>그림 8. 기말고사 점수 분포</figcaption></figure>
+  </div>
+  <p>학기 중 꾸준히 진행한 학습자 인식 설문 결과, 종합 인식 점수는 평균 4.26/5점으로 긍정적인 평가를 받았다. 6개 구인 중에서는 퀴즈-챗봇 연동이 4.48점으로 최고점이었다. 개별 문항 중에서는 부담 없는 분위기가 전체 14개 문항 중 가장 높다. 개별 문항 중 답변 정확성, 재사용 의사, 전반 도움에서도 높은 만족도가 나타났다. 특히 사전 통계 수준이 낮은 학습자일수록 종합 인식이 높게 나타나, 통계적 배경이 부족한 학생에게 교육봇의 효과가 더 크게 체감된 것으로 파악되었다. 아울러 개념 이해와 자신감 항목에서도 긍정적인 응답이 확인되어, 교육봇이 인지된 학습효과 측면에서도 유의미한 역할을 한 것으로 볼 수 있다.</p>
+  <p class="tcap">표 2. 학습자 인식 설문 주요 결과 (5점 리커트, n=22)</p>
+  <table class="num"><thead><tr><th class="l">구인</th><th>평균</th><th class="l">문항</th><th>문항 평균</th></tr></thead>
+  <tbody>
+    <tr><th class="l" rowspan="2">A. 퀴즈-챗봇 연동</th><td rowspan="2">4.48</td><td class="l">퀴즈 즉시 질문</td><td>4.50</td></tr>
+    <tr><td class="l">챗봇 풀이 도움</td><td>4.45</td></tr>
+    <tr><th class="l">B. 멀티모달 인터랙션</th><td>4.45</td><td class="l">모드 전환 가능</td><td>4.45</td></tr>
+    <tr><th class="l" rowspan="3">C. 교수자 실재감</th><td rowspan="3">4.29</td><td class="l">교수자 존재감</td><td>3.82</td></tr>
+    <tr><td class="l">부담 없는 분위기</td><td>4.59</td></tr>
+    <tr><td class="l">강의자료 일관성</td><td>4.45</td></tr>
+    <tr><th class="l" rowspan="2">D. 정확성 및 안정감</th><td rowspan="2">4.16</td><td class="l">답변 정확성</td><td>4.41</td></tr>
+    <tr><td class="l">한계 솔직히 인정</td><td>3.91</td></tr>
+    <tr><th class="l" rowspan="2">E. 학습 몰입 및 호기심</th><td rowspan="2">3.98</td><td class="l">시간 빠르게 감</td><td>3.86</td></tr>
+    <tr><td class="l">호기심 생김</td><td>4.09</td></tr>
+    <tr><th class="l" rowspan="4">F. 인지된 학습효과</th><td rowspan="4">4.29</td><td class="l">개념 이해</td><td>4.32</td></tr>
+    <tr><td class="l">자신감 생김</td><td>4.05</td></tr>
+    <tr><td class="l">재사용 의사</td><td>4.50</td></tr>
+    <tr><td class="l">전반 도움</td><td>4.27</td></tr>
+  </tbody></table>
+  <p class="tcap">표 3. 사전 통계수준별 종합 인식 점수</p>
+  <table class="num"><thead><tr><th>사전 통계수준</th><th>종합 인식 평균</th></tr></thead>
+  <tbody>
+    <tr><td>수준1 (최저)</td><td>4.57</td></tr>
+    <tr><td>수준2</td><td>4.38</td></tr>
+    <tr><td>수준3</td><td>4.21</td></tr>
+    <tr><td>수준4 (최고)</td><td>4.05</td></tr>
+  </tbody></table>
+
+  <h3 class="sub">2) AI 활용에 따른 수업 운영의 효율성 및 효과성</h3>
+  <p>2026-1학기 전체 기준으로 교육봇 누적 이용량은 175세션, 712개 메시지, 사용자 38명이었다. 수강생 수(26명)를 넘는 38명이 이용했다는 것은 교육봇이 수강생 외에도 퍼졌다는 의미다. 실제로 학생들에게 물어보니 타 전공과 교양에서 열리는 통계 과목 수강 중인 친구에게 공유했다는 대답을 들을 수 있었다. 이는 교육봇이 더 넓게 쓰일 수 있다는 가능성을 보여준다.</p>
+  <p>한 번 접속하고 마는 수준이 아니라 계속 대화하면서 학습이 이루어졌다는 게 수치로도 드러난다. 1인당 평균 약 18.7개의 메시지를 주고받았다. 이용이 집중된 시간대가 저녁 19~21시였다는 것도 인상적이다. 학교 밖에서 혼자 공부하는 시간에 교육봇이 실제로 쓰이고 있었다. 실질적인 지원이 이루어졌다는 걸 확인하였다.</p>
+  <p>학습자 인식 설문(n=22)의 인지된 학습효과 구인도 전반적으로 높게 나왔다. 특히 문항 중 재사용 의사가 평균 4.5점이었다. 불편하거나 효과가 없었다면 나오기 어려운 수치다. 반면에 학습몰입·호기심 구인은 평균 3.98점으로, 전체 구인 중 유일하게 4점을 밑돌았다. 이는 교육봇이 학생들의 학습 지원 도구로서는 효과적이었지만, 학습 자체의 재미나 몰입감을 이끌어내는 측면에서는 추가적인 개선이 필요함을 시사한다.</p>
+  <p class="tcap">표 4. AI 교육봇 누적 사용 현황</p>
+  <table><thead><tr><th>항목</th><th class="l">내용</th></tr></thead>
+  <tbody>
+    <tr><th>총 세션 수</th><td class="l">175세션</td></tr>
+    <tr><th>총 메시지 수</th><td class="l">712개</td></tr>
+    <tr><th>사용자 수</th><td class="l">38명 (수강생 26명 초과)</td></tr>
+    <tr><th>1인당 평균 메시지</th><td class="l">약 18.7개</td></tr>
+    <tr><th>이용 집중 시기</th><td class="l">5월 28일, 6월 9일 (재시험 시기)</td></tr>
+    <tr><th>이용 집중 시간대</th><td class="l">19~21시</td></tr>
+  </tbody></table>
+
+  <h3 class="sub">3) 학생 반응 및 피드백</h3>
+  <p>학생 반응에서 가장 기억에 남는 건 질문 방식의 변화였다. 수업 시간에는 손을 잘 안 들던 학생들이 교육봇으로는 꽤 많은 질문을 했다. 선뜻 묻기 어려웠던 기초적이고 반복적인 질문들이 교육봇을 통해 이루어졌다. 그러면서 이해가 막히는 순간 스스로 해결을 시도하는 태도가 자리 잡았다. 특히 수업 내용에 맞춤화된 교육봇을 활용함으로써 범용 LLM 사용 시 발생하던 오정보 문제를 겪지 않을 수 있어, 배운 지식에 확신이 생긴다는 반응도 나왔다. 설문 자유응답에서 나온 ‘부담 없이 물어볼 수 있어서 좋았다’는 말도 단순한 편의성 이야기가 아닌 것 같았다. 교수자한테 물어보기 민망한 질문을 드디어 해결할 수 있게 됐다는 의미로 읽혔다.</p>
+  <p>‘AI 교육봇에게 궁금한 것을 빠르고 부담없이 물어볼 수 있다는 점이 좋았다’, ‘문제를 풀면서 막히는 부분을 바로 질문할 수 있어서 혼자 공부할 때보다 이해가 훨씬 쉬웠고, 학습 효율이 높아졌다.’는 응답도 나왔다.</p>
+  <p>반면 아쉬웠던 반응도 있었다. ‘교수자에게 직접 물어보라는 답변이 생각보다 많아서 아쉬웠다’는 의견이 나왔다. ‘답변 범위가 좁다’는 의견도 나왔다. 교육봇이 답변을 회피하는 상황이 반복되면 학생 입장에서는 결국 못 쓰는 도구가 되어버린다. 응답 커버리지를 넓히는 작업이 다음 학기 최우선 과제로 올라온 이유다.</p>
+  <p>성적에 반영되지 않는 형성평가에 대한 반응도 복잡했다. PASS 기준 도달까지 재응시해야 한다는 구조가 참여를 이끌어내기는 했다. 다만 그 동기가 내적 학습 의지보다는 이수를 위한 외적 동기이자 의무감으로 느껴진다는 경우도 보였다. 성적에 반영되지 않는 평가에 별도의 시간과 노력을 투입해야 한다는 점이 부담과 허무함으로 이어졌다는 반응이었다. 특히 중간고사 기간에 타 과목 시험 준비와 대외활동 및 실습이 겹치는 학생들한테는 적지 않은 부담이 됐을 것이다.</p>
+
+  <h3 class="sub">4) 교수자의 AI 활용 경험 및 인식 변화</h3>
+  <p>이번 학기에 가장 새로웠던 점 하나를 꼽자면, 학생들이 어느 개념에서 막히는지를 데이터로 볼 수 있게 됐다는 것이다. 교육봇에 들어오는 질문 유형을 보면 “이 주제는 다음 수업에서 더 시간을 써야겠다”는 신호를 받을 수 있다. 이전 수업에서는 그냥 감으로 판단하던 부분이다. 꽤 유용한 피드백 루프가 생긴 셈이다.</p>
+  <p>강의 녹취를 텍스트로 정리하는 과정도 의외의 효과가 있었다. 그동안 축적된 설명 방식이나 사례들(즉 암묵지)이 구조화된 형식지로 정리되었다. 그러면서 수업 설계를 다듬는 데도 도움이 됐다. 도입 초기에는 교육봇 응답 품질 검수와 업데이트 주기 유지에 예상보다 많은 시간이 들었다. 다만 안정화된 이후에는 수업 준비의 효율성이 실질적으로 향상되었다. 운영 중 모바일 접근성 문제 및 응답 대기 시간에 대한 학생 피드백이 들어올 때마다 즉각 수정하였고, 이러한 과정을 반복하면서 운영 체계도 빠르게 안정화되었다.</p>
+
+  <h2>Ⅴ. 성찰 및 개선 방향</h2>
+  <h3 class="sub">1) 효과적이었다고 판단한 점</h3>
+  <p>재시험 전 교육봇 이용이 늘어나는 패턴이 반복됐다. 이는 설계 의도대로 ‘틀린 부분 확인 → 복습 → 재도전’의 흐름이 실제로 자리 잡았다는 의미다. 이게 자연스럽게 작동했다는 게 가장 만족스러웠다.</p>
+  <h3 class="sub">2) 운영 과정에서의 어려움 및 한계</h3>
+  <p>가장 구조적인 문제는 형성평가와 학생 동기의 괴리였다. 성적에 반영 안 되는 시험을 봐야 한다는 상황이 학기 중 학업 부담이 몰리는 시점과 겹친다. 그러면 학생 입장에서는 부담으로 느껴진다. ‘그냥 통과하면 되는 것’이 되어버리는 순간, 재시험의 학습적 의미가 얇아진다. 이 부분은 다음 학기 설계에서 가장 먼저 손봐야 할 지점이다.</p>
+  <p>교육봇 응답 커버리지 문제도 계속 걸린다. ‘교수자에게 직접 물어보라는 답변이 생각보다 많아서 아쉬웠다’, ‘답변 범위가 좁다’는 피드백이 있었다. 이는 교육봇이 해결을 회피하는 상황이 반복됐다는 뜻이다. 지식 베이스를 더 세밀하게 확장하는 작업을 꾸준히 해야 한다.</p>
+  <h3 class="sub">3) 윤리적 고려사항 및 운영상 보완 필요 사항</h3>
+  <p>AI 응답의 최종 책임은 교수자에게 있다는 점을 학기 초에 분명히 했다. 이 과정에서 학생들이 교육봇 답변을 무조건 믿기보다는 비판적으로 바라보는 태도를 갖추도록 함께 고민하였다. 이것이 AI 활용 수업에서 교수자가 해야 할 핵심 역할 중 하나라고 본다. 개인정보 보호 측면에서, 학생들이 교육봇에 입력하는 내용이 어떻게 관리되는지에 대한 안내도 정식 절차로 마련할 필요가 있다. 이번 학기에는 플랫폼 보안 정책을 사전에 검토했으나, 학생 동의 절차나 데이터 보관 기준을 명문화한 문서는 없었다. 다음 학기에는 이 부분을 갖춰 두어야겠다고 생각한다.</p>
+  <h3 class="sub">4) 향후 수업 개선 및 발전 방향</h3>
+  <p>형성평가 동기 문제를 해결하려면 향상도를 총괄평가에 일부 연결하는 방식을 검토할 필요가 있다. 재시험 점수 향상 폭이나 교육봇 활용 패턴 같은 지표를 평가에 반영하는 방안도 생각해보고 있다. 아울러 절대평가 운영이 가능한 적정 수강 인원을 유지하여 평가의 일관성을 높이는 것도 함께 검토하고 있다. 기술적으로는 교육봇 질문 유형 분석을 정기화해서 수업 설계에 피드백으로 쓰는 루틴을 만들고 싶다. 퀴즈에서 오답이 나왔을 때 관련 학습 경로를 교육봇이 자동으로 제안하는 연동 구조도 구상 중이며, 질문 빈도가 높은 개념에 대한 보충 영상 자료 제작도 검토하고 있다.</p>
+
+  <h2>Ⅵ. 교육적 시사점 및 확산 가능성</h2>
+  <h3 class="sub">1) 대학 교육에 주는 시사점</h3>
+  <p>범용 LLM이 아닌 수업 특화 AI를 교수·학습 설계의 축으로 쓴다는 발상 자체는 아직 많이 퍼져있지 않다. 직접 운영해보면서 확인한 건, 정확성 통제가 가능해야 교육 현장에서 신뢰 있게 쓸 수 있다는 것이다. 강의 범위 밖의 정보가 섞이지 않도록 설계된 교육봇은 학생 입장에서 “이건 믿을 수 있다”는 경험을 만들어준다. 교육봇을 구축하는 과정 자체에도 생성형 AI를 사용했다는 점에서, 이 수업은 AI를 교육의 도구이자 개발의 수단으로 함께 운용한 사례이기도 하다.</p>
+  <p>이번 사례에서 확인된 또 하나의 시사점은, AI 도입이 기술적 문제보다 평가 설계 문제와 더 깊이 연결되어 있다는 것이다. 형성평가와 총괄평가의 동기 구조를 어떻게 설계하느냐가 AI 활용 수업의 성패를 가르는 변수가 될 수 있다. 또한 본 과목 수강생들이 교육봇을 사용 후 친구들에게 자발적으로 공유했다는 점도 인상적이었다. 도움이 되지 않는 도구를 굳이 권하지는 않는다는 점을 생각하면 이 확산 자체가 효과의 방증이며, 잘 설계된 교육봇이 특정 강의를 넘어 학습 커뮤니티의 자원으로 기능할 수 있음을 보여준다.</p>
+  <h3 class="sub">2) 타 교과목 및 다양한 수업 환경에 적용 가능한 방안</h3>
+  <p>회계원리, 재무관리, 연구방법론 등 개념 이해와 반복 연습이 중요한 과목에 유사하게 적용할 수 있다. 강의 녹취와 강의안을 지식 베이스로 쓰는 방식은 과목별로 조정이 가능하다. 운영 과정을 매뉴얼화하면 진입 비용도 낮출 수 있다.</p>
+  <h3 class="sub">3) 교수·학습 혁신사례로서의 확산 가능성</h3>
+  <p>수업 특화 AI 교육봇과 PASS 기준 재시험의 조합은 하나의 재현 가능한 모델이다. 특히 이번 학기에 드러난 형성 및 총괄 평가의 동기 구조 문제는 AI 활용 수업을 설계하는 많은 교수자들이 공통으로 직면할 이슈이다. 본 사례에서 확인한 것들이 비슷한 고민을 하는 교수자들에게 실질적인 참고 자료가 됐으면 한다.</p>
+
+  <h2>Ⅶ. 기타</h2>
+  <p>학기가 끝나고 돌아보면, 교육봇이 학생들한테 도구로 자리 잡았다는 것보다 더 의미있게 느껴지는 게 있다. 저녁에 혼자 공부하다가 막힐 때 쓸 수 있는 무언가가 생겼다는 경험을 만들었다는 점이다. 다음 학기에는 형성평가의 동기 구조를 다시 설계하고, 교육봇 응답 커버리지를 더 넓히는 두 가지를 우선으로 보완할 생각이다. AI를 수업에 활용한다는 게 거창한 일이 아니다. 학생이 필요한 순간에 정확한 도움을 받을 수 있는 통로를 하나 더 만들어주는 일이라는 걸 이번 학기를 통해 다시금 확인할 수 있었다.</p>
+  <p>한편 본 수업 운영 경험은 학술 논문으로도 이어지고 있다. AI 아바타 챗봇의 신뢰 형성을 다룬 「신뢰 지향 아바타 챗봇의 설계와 사용자 인식」은 <b>디지털콘텐츠학회 논문지에 게재를 준비</b> 중이며, 본 수업(경영통계)의 AI 교육봇 설계와 학습자 인식을 다룬 「경영통계 교육을 위한 퀴즈 연동 멀티모달 AI 티칭봇의 설계와 학습자 인식」은 <b>사이버커뮤니케이션학회지에 게재를 준비</b> 중이다.</p>
+
+  <h2>Ⅷ. 부록</h2>
+  <ul class="goal">
+    <li>· 티칭봇: <a href="https://cha-statistics-bot-liveavatar.vercel.app/">https://cha-statistics-bot-liveavatar.vercel.app/</a></li>
+    <li>· 중간평가 1차 시험 온라인 자료실: <a href="https://sdkparkforbi.github.io/cha-mgmt-stat-2026-1-midterm/index.html">https://sdkparkforbi.github.io/cha-mgmt-stat-2026-1-midterm/index.html</a></li>
+    <li>· 온라인 강의안: <a href="https://sdkparkforbi.github.io/obsidian-vault/statistics/">https://sdkparkforbi.github.io/obsidian-vault/statistics/</a></li>
+  </ul>
+
+</article>
+</body>
+</html>
